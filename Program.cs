@@ -69,7 +69,7 @@ public static class Program {
     // where T : struct
     // where T : class
     // where T : AnyType
-    public static void LogHuman<T>(T obj) where T : Man {
+    public static void LogHuman<T>(T obj) where T : Human {
         System.Console.WriteLine("age: " + obj.age);
     }
 
