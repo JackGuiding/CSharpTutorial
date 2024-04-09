@@ -13,27 +13,72 @@ public class MyType : System.Object {
 
 }
 
+public class Human {
+    public int age;
+    public string name;
+}
+
+public class Woman : Human {
+    public int height;
+}
+
+public class Man : Human {
+    public int weight;
+}
+
 // <T>
 public static class Program {
 
     public static void Main() {
 
         // ==== Eg: 1 ==== 
-        int v = 1;
+        Int32 v = 1;
         // v.ToString(); // "1"
 
-        Log<int>(v);
+        Log<Int32>(v);
         // Log(v); // 可省略成这样
 
         // ==== Eg: 2 ====
         MyType type = new MyType();
         Log(type);
 
+        // ==== Eg: 3 ====
+        Woman wm = new Woman();
+        wm.age = 3;
+        LogHuman(wm);
+
+        Man man = new Man();
+        man.age = 5;
+        LogHuman(man);
+
+        // LogHuman(v); x 不行, 因为不符合 where T : Human
+
     }
 
     public static void Log<T>(T obj) {
-        string str = obj.ToString();
-        Console.WriteLine(str);
+        string str = typeof(T).Name;
+        if (str == "Int32") {
+            System.Console.WriteLine("Value");
+        } else if (str == "Single") {
+            System.Console.WriteLine("Float");
+        } else {
+            System.Console.WriteLine("Spec Type");
+        }
+    }
+
+    // where T : struct
+    // where T : class
+    // where T : AnyType
+    public static void LogHuman<T>(T obj) where T : Man {
+        System.Console.WriteLine("age: " + obj.age);
+    }
+
+    public static void LogWoman(Woman woman) {
+
+    }
+
+    public static void LogMan(Man man) {
+
     }
 
 }
