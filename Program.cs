@@ -2,7 +2,8 @@
 
     public static void Main() {
         // GenericMethod.Entry();
-        GenericClass.Entry();
+        // GenericClass.Entry();
+        DelegateTutorial.Entry();
     }
 
 }
