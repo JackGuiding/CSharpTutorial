@@ -49,6 +49,7 @@ public class PlaneRepository {
 public static class Sample {
 
     public static void Entry() {
+
         PlaneRepository repo = new PlaneRepository();
         // o o o o 4
         // o o o x 2

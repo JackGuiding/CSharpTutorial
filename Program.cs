@@ -4,7 +4,8 @@
         // GenericMethod.Entry();
         // GenericClass.Entry();
         // DelegateTutorial.Entry();
-        Sample.Entry();
+        // Sample.Entry();
+        Architecture.Entry();
     }
 
 }
