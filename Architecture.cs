@@ -76,6 +76,19 @@ public static class Architecture {
         // 通过委托, 从低层获取到高层的某个值
         btn.OnClick();
 
+        {
+            Predicate<int> pred = (int i) => {
+                return i > 0;
+            };
+            bool isTrue1 = pred.Invoke(3);
+
+            // 用 Func 替代 Predicate
+            Func<int, bool> fakePred = (int i) => {
+                return i > 0;
+            };
+            bool isTrue2 = fakePred.Invoke(3);
+        }
+
     }
 
 }
