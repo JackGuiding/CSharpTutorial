@@ -7,7 +7,8 @@
         // Sample.Entry();
         // Architecture.Entry();
 
-        Collection_List_App.Entry();
+        // Collection_List_App.Entry();
+        Collection_Dictionary_App.Entry();
     }
 
 }

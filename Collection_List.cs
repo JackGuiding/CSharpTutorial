@@ -165,6 +165,8 @@ public static class Collection_List_App {
         // SortedList 禁止重复 Key
         SortedList<int, int> slist = new SortedList<int, int>(20_0000);
 
+        // Dictionary 禁止重复 Key
+        // 添加和查找依赖于 Key
         Dictionary<int, int> dict = new Dictionary<int, int>(20_0000);
 
         // 添加
