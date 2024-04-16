@@ -5,7 +5,9 @@
         // GenericClass.Entry();
         // DelegateTutorial.Entry();
         // Sample.Entry();
-        Architecture.Entry();
+        // Architecture.Entry();
+
+        Collection_List_App.Entry();
     }
 
 }
