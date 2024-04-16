@@ -83,29 +83,67 @@ public static class Collection_Dictionary_App {
 
     public static void Entry() {
 
-        MyDict myDict = new MyDict(20_0000);
-        Dictionary<int, object> dict = new Dictionary<int, object>(20_0000);
-        for (int i = 0; i < 20_0000; i += 1) {
-            myDict.Add(i, null);
-            dict.Add(i, null);
-        }
+        // MyDict myDict = new MyDict(20_0000);
+        // Dictionary<int, object> dict = new Dictionary<int, object>(20_0000);
+        // for (int i = 0; i < 20_0000; i += 1) {
+        //     myDict.Add(i, null);
+        //     dict.Add(i, null);
+        // }
 
-        {
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
-            object value = dict[19_5555];
-            sw.Stop();
-            System.Console.WriteLine($"MS Time: {sw.Elapsed.Microseconds} mrs");
-        }
+        // {
+        //     Stopwatch sw = new Stopwatch();
+        //     sw.Start();
+        //     object value = dict[19_5555];
+        //     sw.Stop();
+        //     System.Console.WriteLine($"MS Time: {sw.Elapsed.Microseconds} mrs");
+        // }
 
-        {
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
-            object value = myDict.Get(19_5555);
-            sw.Stop();
-            System.Console.WriteLine($"My Time: {sw.Elapsed.Microseconds} mrs");
-        }
-        
+        // {
+        //     Stopwatch sw = new Stopwatch();
+        //     sw.Start();
+        //     object value = myDict.Get(19_5555);
+        //     sw.Stop();
+        //     System.Console.WriteLine($"My Time: {sw.Elapsed.Microseconds} mrs");
+        // }
+
+        // QueueWhat();
+        StackWhat();
+
+    }
+
+    static void QueueWhat() {
+
+        // 先入先出
+        Queue<int> a = new Queue<int>();
+        a.Enqueue(3); // [3]
+        a.Enqueue(5); // 3 [5]
+
+        int value = a.Peek(); // 查看第一个元素, 但不出列
+        System.Console.WriteLine("peek: " + value);
+
+        value = a.Dequeue(); // [3] 5
+        System.Console.WriteLine("dq1: " + value);
+
+        value = a.Dequeue(); // [5]
+        System.Console.WriteLine("dq2: " + value);
+
+    }
+
+    static void StackWhat() {
+
+        // 后入先出
+        Stack<int> a = new Stack<int>();
+        a.Push(3); // [3]
+        a.Push(5); // 3 [5]
+
+        int value = a.Peek(); // 查看第一个元素, 但不出栈
+        System.Console.WriteLine("peek: " + value);
+
+        value = a.Pop(); // [3] 5
+        System.Console.WriteLine("pop1: " + value);
+
+        value = a.Pop(); // [5]
+        System.Console.WriteLine("pop2: " + value);
     }
 
 }
