@@ -8,7 +8,9 @@
         // Architecture.Entry();
 
         // Collection_List_App.Entry();
-        Collection_Dictionary_App.Entry();
+        // Collection_Dictionary_App.Entry();
+        ReflectionSample.Reflection_Tutorial.Entry();
+
     }
 
 }
